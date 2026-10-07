@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{<!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Desafío: el sistema nervioso</title>
@@ -29,7 +29,7 @@ h1{font-size:22px;margin:0 0 4px}
 </style></head>
 <body><main>
 <h1>🧠 El sistema nervioso</h1>
-<p class="sub">Desafío de 10 preguntas: ¡tenés 15 segundos por pregunta!</p>
+<p class="sub">Desafío de 10 preguntas: ¡tenés 20 segundos por pregunta!</p>
 <div id="game">
  <div class="bar"><div id="pb"></div></div>
  <div class="meta"><span id="num"></span><span id="tm"></span><span id="sc"></span></div>
@@ -47,18 +47,18 @@ h1{font-size:22px;margin:0 0 4px}
 </main>
 <script>
 var Q=[
-{q:"¿Qué parte de la neurona contiene el núcleo?",o:["Soma","Axón","Dendrita","Botón terminal"],a:0,e:"El soma o cuerpo celular contiene el núcleo y los orgánulos de la neurona."},
-{q:"¿Qué células del SNC forman la mielina?",o:["Células de Schwann","Oligodendrocitos","Astrocitos","Microglía"],a:1,e:"Los oligodendrocitos forman la mielina en el SNC; en el SNP lo hacen las células de Schwann."},
-{q:"¿Qué células gliales cumplen un rol de defensa inmune en el sistema nervioso?",o:["Astrocitos","Oligodendrocitos","Microglía","Células de Schwann"],a:2,e:"La microglía remueve desechos y participa de la respuesta inmune del SNC."},
-{q:"¿Cuál es la distancia aproximada de la hendidura sináptica?",o:["2 mm","20 nm","2 cm","200 µm"],a:1,e:"La hendidura sináptica mide unos 20 nanómetros."},
-{q:"¿Qué ion sale de la neurona durante la repolarización?",o:["Na⁺","Ca²⁺","K⁺","Cl⁻"],a:2,e:"Sale K⁺ y la bomba sodio-potasio restablece las concentraciones originales."},
-{q:"¿Qué dice la ley del todo o nada?",o:["El impulso crece con el estímulo","La neurona se excita o no, siempre con el mismo potencial","La mielina decide la intensidad","Solo funciona en reposo"],a:1,e:"Si el estímulo supera el umbral, la neurona genera siempre el mismo potencial de acción."},
-{q:"¿Qué parte del encéfalo coordina el equilibrio y los movimientos finos?",o:["Hipotálamo","Bulbo raquídeo","Cerebelo","Tálamo"],a:2,e:"El cerebelo coordina el equilibrio, la postura y los movimientos finos."},
-{q:"¿Qué lóbulo cerebral se asocia principalmente con la visión?",o:["Frontal","Parietal","Temporal","Occipital"],a:3,e:"El lóbulo occipital procesa los estímulos visuales."},
-{q:"¿Cuántos pares de nervios craneales hay?",o:["12","8","31","24"],a:0,e:"Hay doce pares de nervios craneales, designados con números romanos."},
-{q:"¿Qué neurotransmisor liberan las neuronas posganglionares del sistema simpático?",o:["Acetilcolina","Dopamina","GABA","Noradrenalina"],a:3,e:"Las neuronas posganglionares simpáticas liberan noradrenalina; en el parasimpático es acetilcolina."}
+{q:"¿Cómo se llaman las células principales del sistema nervioso?",o:["Neuronas","Glóbulos rojos","Células óseas","Células musculares"],a:0,e:"Las neuronas son las células principales del sistema nervioso."},
+{q:"¿Qué parte de la neurona recibe las señales de otras neuronas?",o:["Axón","Dendritas","Mielina","Núcleo"],a:1,e:"Las dendritas son prolongaciones ramificadas que reciben información."},
+{q:"¿Qué parte de la neurona conduce el impulso nervioso hacia otras células?",o:["Axón","Dendritas","Soma","Hendidura"],a:0,e:"El axón es la prolongación larga que conduce el impulso."},
+{q:"¿Dónde está el núcleo de la neurona?",o:["En el axón","En las dendritas","En el soma o cuerpo celular","En la mielina"],a:2,e:"El núcleo se encuentra en el soma o cuerpo celular."},
+{q:"¿Qué función tiene la vaina de mielina?",o:["Hace más rápido el impulso","Produce neurotransmisores","Guarda la memoria","Recibe estímulos"],a:0,e:"La mielina aísla el axón y hace que el impulso viaje más rápido."},
+{q:"¿Cómo se llama la unión entre dos neuronas?",o:["Músculo","Sinapsis","Meninge","Nervio craneal"],a:1,e:"La sinapsis es el punto donde una neurona transmite el impulso a la siguiente."},
+{q:"¿Qué sustancias liberan las neuronas para comunicarse en la sinapsis química?",o:["Neurotransmisores","Hormonas del hueso","Mielina","Sangre"],a:0,e:"Los neurotransmisores, como la dopamina o la serotonina, llevan el mensaje a la neurona vecina."},
+{q:"¿Qué dos partes forman el sistema nervioso central (SNC)?",o:["Corazón y pulmones","Encéfalo y médula espinal","Estómago e intestino","Ojos y oídos"],a:1,e:"El SNC está formado por el encéfalo y la médula espinal."},
+{q:"¿Qué parte del encéfalo se asocia con la visión?",o:["Lóbulo occipital","Cerebelo","Bulbo raquídeo","Meninges"],a:0,e:"El lóbulo occipital procesa los estímulos visuales."},
+{q:"¿Qué capas protegen al encéfalo y a la médula espinal?",o:["Las meninges","Las dendritas","Los músculos","Los neurotransmisores"],a:0,e:"Las meninges (duramadre, aracnoides y piamadre) protegen al sistema nervioso central."}
 ];
-var T0=15,tl=T0,tm=null;
+var T0=20,tl=T0,tm=null;
 var i=0,s=0,done=false;
 var $=function(id){return document.getElementById(id)};
 function show(){
